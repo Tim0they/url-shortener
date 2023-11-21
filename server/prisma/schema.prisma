@@ -17,3 +17,11 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Url {
+  code      String   @unique
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+  urlText   String
+}
